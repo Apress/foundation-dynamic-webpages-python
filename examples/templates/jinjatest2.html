@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+       <title>{{ title }}</title>
+       <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+       <link rel="stylesheet" type="text/css" href="/css/example2-2.css" />
+    </head>
+    <body>
+    <!--Begin Header-->
+    <div id="header">
+        <!-- Begin Picture Column -->
+        <div id="header-left"> 
+            <a href="/"><img src="/images/Dora.jpg" alt="Holmes4" /></a>
+            <br />image by W.David Ashley
+        </div>
+        <!-- Begin Title Column -->
+        <div id="header-right"><h1>{{ title1 }}</h1> 
+        </div>
+    </div>
+    <!--Begin Page Menu-->
+    <div id="pagemenu">
+        <!-- Begin Left Title Column -->
+        <div id="pagemenu-left">{{ titleleft }}
+        </div>
+        <!-- Begin Page Menu Column -->
+        <div id="pagemenu-right"><a href="/">&nbsp;Home&nbsp;</a>&nbsp;
+                <a href="/">&nbsp;Menu2&nbsp;</a>&nbsp;
+                <a href="/">&nbsp;Menu3&nbsp;</a>&nbsp;
+        </div>
+    </div>
+        <!--Begin Content-->
+        <div id="content">
+            <!-- Begin Content Menu Column -->
+            <div id="content-left">
+            </div>
+            <!-- Begin Content Column -->
+            <div id="content-right"> 
+                <pre>{% for row in rows %}{{ row|e }}<br/>{% endfor %}</pre>
+            </div>
+    <!-- Begin Footer -->
+    <div id="footer">
+        <div id="footer-data">
+            <img alt="Powered by Apache" src="/images/apache_pb.png" />
+            <br />&#169; Copyright 2010-{{ year }}
+            W. David Ashley. All rights reserved. 
+        </div>
+    </div>
+    </body>
+    </html>

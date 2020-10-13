@@ -1,0 +1,108 @@
+    <!--Begin Content-->
+    <div id="content">
+        <!-- Begin Contemt Menu Column -->
+        <div id="content-left">
+            <p>
+                <a href="#begin-print">begin-print</a><br/>
+                <a href="#createcustomwidget">create-custom-widget</a><br/>
+                <a href="#customwidgetapply">custom-widget-apply</a><br/>
+                <a href="#done">done</a><br/>
+                <a href="#drawpage">draw-page</a><br/>
+                <a href="#endprint">end-print</a><br/>
+                <a href="#paginat">paginat</a><br/>
+                <a href="#preview">preview</a><br/>
+                <a href="#requestpagesetup">request-page-setup</a><br/>
+                <a href="#statuschanged">status-changed</a>
+            </p>
+        </div>
+        <!-- Begin Content Column -->
+        <div id="content-right"> 
+            <h1>GtkPrintOperations</h1>
+            <p>The following table describes the signals used by the GtkPrintOperations.</p>
+            <table border="1">
+                <thead>
+                   <tr>
+                      <th>Signal Name</th>
+                      <th>Additional Parameters</th>
+                      <th>Description</th>
+                   </tr>
+                </thead>
+                <tbody>
+                   <tr>
+                      <td width="25%"><a id="beginprint"/>begin-print</td>
+                      <td width="25%">GtkPrintContext *context</td>
+                      <td width="50%">The user just finished changing printer settings but
+                                      rendering has not yet begun.</td>
+                   </tr>
+                   <tr>
+                      <td width="25%"><a id="createcustomwidget"/>create-custom-widget</td>
+                      <td width="25%">None</td>
+                      <td width="50%">The dialog was just displayed. You can return a
+                                      widget or a container widget containing multiple widgets
+                                      from the callback function so that it will be added as a
+                                      custom page to the dialog’s GtkNotebook.</td>
+                   </tr>
+                   <tr>
+                      <td width="25%"><a id="customwidgetapply"/>custom-widget-apply</td>
+                      <td width="25%">GtkWidget *widget</td>
+                      <td width="50%">Right before begin-print is emitted, this signal is 
+                                      emitted if a custom widget was added in the 
+                                      create-customwidget signal handler.</td>
+                   </tr>
+                   <tr>
+                      <td width="25%"><a id="done"/>done</td>
+                      <td width="25%">GtkPrintOperationResult result</td>
+                      <td width="50%">Printing completed, and you can now view the result.
+                                      You should use gtk_print_operation_get_error() to
+                                      check the error message if the result was 
+                                      GTK_PRINT_OPERATION_RESULT_ERROR.</td>
+                   </tr>
+                   <tr>
+                      <td width="25%"><a id="drawpage"/>draw-page</td>
+                      <td width="25%">GtkPrintContext *context gint page_num</td>
+                      <td width="50%">Each page must be converted into a Cairo context.
+                                      You can use this callback to render a page manually.</td>
+                   </tr>
+                   <tr>
+                      <td width="25%"><a id="endprint"/>end-print</td>
+                      <td width="25%">GtkPrintContext *context</td>
+                      <td width="50%">All of the pages were rendered.</td>
+                   </tr>
+                   <tr>
+                      <td width="25%"><a id="paginat"/>paginat</td>
+                      <td width="25%">GtkPrintContext *context</td>
+                      <td width="50%">This signal is emitted after begin-print but before page
+                                      rendering begins. It will continue to be emitted until
+                                      FALSE is returned or until it is not handled. This allows you
+                                      to split the document into pages in steps so that the
+                                      user interface is not noticeably blocked.</td>
+                   </tr>
+                   <tr>
+                      <td width="25%"><a id="preview"/>preview</td>
+                      <td width="25%">GtkPrintOperationPreview *preview
+                                      GtkPrintContext *context GtkWindow *parent</td>
+                      <td width="50%">The user requested a preview of the document from
+                                      the main printing dialog. This signal allows you to create
+                                      your own preview dialog. If this signal is not handled, the
+                                      default handler will be used. The callback function returns
+                                      TRUE if you are handling the print preview.</td>
+                   </tr>
+                   <tr>
+                      <td width="25%"><a id="requestpagesetup"/>request-page-setup</td>
+                      <td width="25%">GtkPrintContext *context gint page_num GtkPageSetup 
+                                      *setup</td>
+                      <td width="50%">This signal is emitted for every page, which gives you one last
+                                      chance to edit the setup of a page before it is printed. Any
+                                      changes will be applied to only the current page!</td>
+                   </tr>
+                   <tr>
+                      <td width="25%"><a id="statuschanged"/>status-changed</td>
+                      <td width="25%">None</td>
+                      <td width="50%">Possible values are defined by the GtkPrintStatus 
+                                      enumeration, and the current value can be retrieved with
+                                      gtk_print_operation_get_status().</td>
+                   </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>

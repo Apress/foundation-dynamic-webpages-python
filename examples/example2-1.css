@@ -1,0 +1,52 @@
+/* ++++++++++ start global general styles ++++++++++*/	
+html, body {
+   margin: 0px;
+   padding: 0px;
+   font: 10pt arial, helvetica, sans-serif;
+   background: #ffffff;
+   color: #000000;
+   }
+/* ++++++++++ end global general styles ++++++++++*/	
+/* ++++++++++ start global structure styles ++++++++++*/	
+
+#body {
+   position: relative;
+   text-align: left;	
+   }	
+
+#header {
+   position: relative;
+   padding-left: 5px;
+   padding-top: 5px;
+   padding-right: 5px;
+   padding-bottom: 0px;
+   left: 0px;
+   top: 0px;
+   width: *;
+   height: 165px;
+   }	
+	
+#header-left {
+   width: 200px;
+   height: 160px;
+   float: left;
+   vertical-align: middle;
+   text-align: center;
+   font-size: 8px;
+   border: 1px solid #ccc;
+   padding: 5px 10px 5px 10px;
+   }		
+
+#header-right {
+   width: *;
+   height: 160px;
+   line-height: 90px;
+   vertical-align: middle;
+   font-size: 22px;
+   border: 1px solid #ccc;
+   padding: 5px 10px 5px 10px;
+   overflow-x: hidden;
+   }		
+	
+/* ++++++++++ end global structure styles ++++++++++*/	
+

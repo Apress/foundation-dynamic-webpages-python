@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Example4-1</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+</head>
+<body id="body">
+    <h1>Example4-1 - errmsg SSI Directive</h1>
+    <p>The following is an example of the <i>config errmsg</i> SSI directive. The error 
+       message should be "This is an example error!".</p>
+    <!--#config errmsg="This is an example error!"-->
+    <!--#config xerrmsg="This is an example error!"-->
+    <br/>
+    <p>The following is an example of the <i>config sizefmt</i> SSI directive. The file 
+       size should be presented in either kilobytes or megabytes.</p>
+    <!--#config sizefmt="abbrev"-->
+    <!--#fsize file="./example4-1.html"-->
+    <br/>
+    <p>The following is an example of the <i>config timefmt</i> SSI directive. The file 
+       time should be presented as "%A %Y-%m-%d %H:%M:%S".</p>
+    <!--#config timefmt="%A %Y-%m-%d %H:%M:%S"-->
+    <!--#flastmod file="./example4-1.html"-->
+</body>
+</html>

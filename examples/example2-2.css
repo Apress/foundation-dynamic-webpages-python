@@ -1,0 +1,120 @@
+/* ++++++++++ start global general styles ++++++++++*/	
+html, body {
+   margin: 0px;
+   padding: 0px;
+   font: 10pt arial, helvetica, sans-serif;
+   background: #ffffff;
+   color: #000000;
+   }
+/* ++++++++++ end global general styles ++++++++++*/	
+/* ++++++++++ start global structure styles ++++++++++*/	
+
+#body {
+   position: relative;
+   text-align: left;	
+   }	
+
+#header {
+   position: relative;
+   padding-left: 5px;
+   padding-top: 5px;
+   padding-right: 5px;
+   padding-bottom: 0px;
+   left: 0px;
+   top: 0px;
+   width: *;
+   height: 165px;
+   }	
+	
+#header-left {
+   width: 200px;
+   height: 155px;
+   float: left;
+   vertical-align: middle;
+   text-align: center;
+   font-size: 8px;
+   border: 1px solid #ccc;
+   padding: 5px 10px 5px 10px;
+   background-color: #F9DAA5;
+   }		
+
+#header-right {
+   width: *;
+   height: 155px;
+   line-height: 90px;
+   vertical-align: middle;
+   font-size: 22px;
+   border: 1px solid #ccc;
+   padding: 5px 10px 5px 10px;
+   overflow-x: hidden;
+   }		
+
+#pagemenu {
+   float: relative;
+   padding-left: 5px;
+   padding-top: 2px;
+   padding-right: 5px;
+   padding-bottom: 0px;
+   width: *;
+   height: 25px;
+}	
+
+#pagemenu-left {
+   width: 200px;
+   float: left;
+   height: 15px;
+   text-align: center;
+   padding: 5px 10px 5px 10px;
+   background-color: #F9DAA5;
+   border: 1px solid #ccc;
+}
+
+#pagemenu-right {
+   width: *;
+   height: 15px;
+   overflow-x: hidden;
+   padding: 5px 10px 5px 10px;
+   border: 1px solid #ccc;
+}
+
+#content {
+   float: relative;
+   min-height: 355px;
+   padding-left: 5px;
+   padding-top: 2px;
+   padding-right: 5px;
+   padding-bottom: 0px;
+   width: *;
+}	
+	
+#content-left { 
+   position: absolute;
+   width: 200px;
+   height: 345px;
+   padding: 5px 10px 5px 10px;
+   background-color: #F9DAA5;
+   border: 1px solid #ccc;
+}
+
+#content-right { 
+   margin: 0 0 0 222px;
+   padding: 5px 10px 5px 10px;
+   border: 1px solid #ccc;
+   }
+
+#footer {
+   padding-left: 5px;
+   padding-top: 2px;
+   padding-right: 5px;
+   padding-bottom: 0px;
+}	
+
+#footer-data { 
+   width: *;
+   padding: 5px 10px 5px 10px;
+   text-align: center;
+   border: 1px solid #ccc;
+}
+
+/* ++++++++++ end global structure styles ++++++++++*/	
+
